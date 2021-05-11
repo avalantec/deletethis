@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="deletethis.list">
+      <field name="name">deletethis list</field>
+      <field name="model">deletethis.deletethis</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="deletethis.action_window">
+      <field name="name">deletethis window</field>
+      <field name="res_model">deletethis.deletethis</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="deletethis.action_server">
+      <field name="name">deletethis server</field>
+      <field name="model_id" ref="model_deletethis_deletethis"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="deletethis" id="deletethis.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="deletethis.menu_1" parent="deletethis.menu_root"/>
+    <menuitem name="Menu 2" id="deletethis.menu_2" parent="deletethis.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="deletethis.menu_1_list" parent="deletethis.menu_1"
+              action="deletethis.action_window"/>
+    <menuitem name="Server to list" id="deletethis" parent="deletethis.menu_2"
+              action="deletethis.action_server"/>
+-->
+  </data>
+</odoo>
